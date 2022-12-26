@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+
+
+html, body{
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  place-items: center;
+  background: linear-gradient(to right, #bbb9ba 0%, #bbb9ba 100%);
+  
+}
+::selection{
+  background: #78977b;
+
+}
+.container{
+  background: #fff;
+  max-width: 550px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+.container form .title{
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  position: relative;
+}
+.center {
+    margin-left: 120px;
+    margin-right: auto;
+    width: 50%;
+  }
+
+
+.container form .Signuptitle{
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  position: relative;
+}
+.container form .Signuptitle::before{
+  content: '';
+  position: absolute;
+  
+  height: 4px;
+  width: 500px;
+  left: 0px;
+  bottom: -3px;
+  border-radius: 40px;
+  background: linear-gradient(to right, #57b727 100%, #ff0080 100%);
+
+}

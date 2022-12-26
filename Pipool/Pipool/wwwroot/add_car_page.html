@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+   
+    <link rel="stylesheet" href="add css\css_for_add_car.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+  
+    <div class="container">
+      <form action="#">
+        
+        <img src="image\pipoologowith.png" alt=”Image” height=200px width=200px  class="center">
+        <div class="Signuptitle">Add your car </div>
+        <div class="input-box underline">
+            <input type="text" placeholder="Brand" required>
+            <div class="underline"></div>
+          </div>
+          <div class="input-box underline">
+            <input type="text" placeholder="type" required>
+            <div class="underline"></div>
+          </div>
+          <div class="input-box underline">
+            <input type="tel" placeholder="color" required>
+            <div class="underline"></div>
+          </div>
+        <div class="input-box underline">
+          <input type="text" placeholder=" Plate Number" required>
+          <div class="underline"></div>
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Serial number " required>
+          <div class="underline"></div>
+        </div>
+        <div class="input-box">
+          <input type="number" placeholder="Max Persone can handel " required>
+          <div class="underline"></div>
+        </div>
+        <div class="input-box button">
+          <button  type="button" onclick="addyourcarbutton()" class="addyourcarbutton"> Add your car </button>
+        </div>
+        <script>
+          function addyourcarbutton()
+          {
+            location.href = "Thankyou_adding_your_car.html";
+          }
+        </script>
+
+        
+
+      </form>
+    </div>
+  </body>
+</html>
+

@@ -45,7 +45,7 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "MongoDB.Driver.Core": {
+            "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.18.0, )"
             }

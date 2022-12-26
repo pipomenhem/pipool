@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Pipool.Model;
+using MongoDB.Driver;
 
 namespace Pipool.Controllers
 {
@@ -11,6 +13,29 @@ namespace Pipool.Controllers
     [ApiController]
     public class WelcomeappController : ControllerBase
     {
-        
+        DBConnection database;
+         public WelcomeappController (DBConnection dB)
+         {
+            database = dB;
+
+         }
+       
+        [HttpGet("dbtest")]
+        public IActionResult dbtest()
+        {
+            IMongoCollection<User> Usercollection=  database.GetCollection<User>("Pipool", "User");
+
+
+            List<User> UserList = Usercollection.Find(FilterDefinition<User>.Empty).ToList<User>();
+
+            return Ok();
+
+
+
+        }
+
+
     }
+
+    
 }

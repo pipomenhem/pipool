@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-   
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="css\signupin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,34 +11,40 @@
   <body>
   
     <div class="container">
-      <form action="#">
-        
-        <img src="image/pipoologowith.png" alt=”Image” height=200px width=200px  class="center">
-        <div class="Signuptitle">Sign up</div>
-        <div class="input-box underline">
-            <input type="text" placeholder="First Name " required>
-            <div class="underline"></div>
-          </div>
-          <div class="input-box underline">
-            <input type="text" placeholder="Last Name " required>
-            <div class="underline"></div>
-          </div>
-          <div class="input-box underline">
-            <input type="tel" placeholder="Phone Number" required>
-            <div class="underline"></div>
-          </div>
-        <div class="input-box underline">
-          <input type="text" placeholder="Enter Your Email" required>
-          <div class="underline"></div>
-        </div>
-        <div class="input-box">
-          <input type="password" placeholder="Enter Your Password" required>
-          <div class="underline"></div>
-        </div>
-        <div class="input-box button">
-          <input type="submit" name="" value="Sign up">
-        </div>
-      </form>
+        <form action="#">
+
+            <img src="image/pipoologowith.png" alt=”Image” height=200px width=200px class="center">
+            <div class="Signuptitle">Sign up</div>
+            <div class="input-box underline">
+                <input type="text" ID="FirstName" placeholder="First Name " required>
+
+
+                <div class="underline"></div>
+            </div>
+            <div class="input-box underline">
+                <input type="text" id="LastName" placeholder="Last Name " required>
+
+                <div class="underline"></div>
+            </div>
+            <div class="input-box underline">
+                <input type="tel" id="PhoneNumber" placeholder="Phone Number" required>
+
+                <div class="underline"></div>
+            </div>
+            <div class="input-box underline">
+                <input type="text" id="Email" placeholder="Enter Your Email" required>
+                <div class="underline"></div>
+            </div>
+           
+            <div class="input-box">
+                <input type="password" id="Password" placeholder="Enter Your Password" required>
+                <div class="underline"></div>
+            </div>
+
+            <div class="input-box button">
+                <input type="submit" id="Sumbit" name="" value="Sign up">
+            </div>
+        </form>
         <div class="option">or Connect With</div>
         <div class="twitter">
           <a href="#"><i class="fab fa-twitter"></i>Sign  up with Twitter</a>
@@ -48,5 +54,37 @@
         </div>
     </div>
   </body>
+     <script>
+         function Signup()
+         {
+             let fname = document.getElementById("FirstName").value;
+             let lname = document.getElementById("LastName").value;
+             let tel = document.getElementById("PhoneNumber").value;
+             let paswrd = document.getElementById("Password").value;
+             let email = document.getElementById("Email").value;
+             
+
+             //newww
+             axios.post("/api/Auth/Signup", {
+                 FirstName: fname,
+                 LastName: lname,
+                 Password: paswrd,
+                 PhoneNumber: tel,
+                 Email: email,
+               
+
+
+
+             })
+
+         }
+         //bede esma3 3al event 5al2na fuction bi 2alb el parametre 
+         // +1 lal java script
+
+
+         //newwww
+         document.getElementById("Sumbit").addEventListener("click", () => { Signup() })
+
+     </script>
 </html>
 

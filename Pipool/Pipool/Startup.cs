@@ -25,6 +25,9 @@ namespace Pipool
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            DBConnection db = new DBConnection("mongodb://pipoolProject:ZFL6YElmbQW1jF76@ac-wiyxssr-shard-00-00.23cqgoh.mongodb.net:27017,ac-wiyxssr-shard-00-01.23cqgoh.mongodb.net:27017,ac-wiyxssr-shard-00-02.23cqgoh.mongodb.net:27017/?ssl=true&replicaSet=atlas-qvy0w6-shard-0&authSource=admin&retryWrites=true&w=majority");
+            services.AddSingleton<DBConnection>(db);
+
             services.AddControllers();
         }
 
